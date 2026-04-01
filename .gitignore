@@ -25,6 +25,7 @@ replay_pid*
 .pnpm-store/
 my-agent/
 my-agent.wt/
+.postgres-data/
 scratch/
 summaries/
 policy-restrict-ip.yml
@@ -40,3 +41,4 @@ target/
 .idea/
 *.iml
 .vscode/
+my-agent/
