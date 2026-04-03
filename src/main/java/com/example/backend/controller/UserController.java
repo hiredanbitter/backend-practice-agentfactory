@@ -40,4 +40,9 @@ public class UserController {
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
     }
+
+    @GetMapping("/{id}/posts")
+    public List<String> getPostsForUser(@PathVariable Long id) {
+        return userService.getPostUsernamesByUserId(id);
+    }
 }

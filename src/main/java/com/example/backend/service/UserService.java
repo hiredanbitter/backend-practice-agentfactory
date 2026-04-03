@@ -1,6 +1,8 @@
 package com.example.backend.service;
 
+import com.example.backend.domain.Post;
 import com.example.backend.domain.User;
+import com.example.backend.repository.PostRepository;
 import com.example.backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,9 +15,11 @@ import java.util.NoSuchElementException;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PostRepository postRepository;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PostRepository postRepository) {
         this.userRepository = userRepository;
+        this.postRepository = postRepository;
     }
 
     public User createUser(String username, String email) {
@@ -34,5 +38,14 @@ public class UserService {
 
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    public List<String> getPostUsernamesByUserId(Long userId) {
+        List<Post> posts = postRepository.findByUserId(userId);
+        List<String> usernames = new java.util.ArrayList<>();
+        for (Post post : posts) {
+            usernames.add(post.getUser().getUsername());
+        }
+        return usernames;
     }
 }
