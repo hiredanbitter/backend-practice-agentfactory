@@ -6,9 +6,9 @@
 set -euo pipefail
 
 ISSUES=(
-  BAC-8
-  BAC-9
-  # BAC-10
+  # BAC-8
+  # BAC-9
+  BAC-10
   # BAC-11
   # BAC-12
   # BAC-13

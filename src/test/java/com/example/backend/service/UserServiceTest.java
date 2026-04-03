@@ -1,6 +1,7 @@
 package com.example.backend.service;
 
 import com.example.backend.domain.User;
+import com.example.backend.repository.PostRepository;
 import com.example.backend.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -22,6 +23,9 @@ class UserServiceTest {
 
     @Mock
     private UserRepository userRepository;
+
+    @Mock
+    private PostRepository postRepository;
 
     @InjectMocks
     private UserService userService;
