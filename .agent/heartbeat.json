@@ -1,0 +1,10 @@
+{
+  "timestamp": 1775430757460,
+  "pid": 6824,
+  "memoryUsageMB": 39,
+  "uptime": 10,
+  "lastActivityType": "tool_use",
+  "lastActivityTimestamp": 1775430755450,
+  "toolCallsCount": 4,
+  "currentOperation": "Glob"
+}
