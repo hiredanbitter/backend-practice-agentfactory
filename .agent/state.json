@@ -1,0 +1,17 @@
+{
+  "issueId": "bd6cb210-7da6-495a-a834-a81ac8163ece",
+  "issueIdentifier": "BAC-33",
+  "linearSessionId": "2aa54fe1-d6b1-4f4b-8ea1-2e5c82229b44",
+  "providerSessionId": "0b16b6b9-22dd-49b3-acfa-e87cd091d9b9",
+  "workType": "development",
+  "prompt": "Start work on BAC-33.\nImplement the feature/fix as specified in the issue description.\n\nDEPENDENCY INSTALLATION:\nDependencies are symlinked from the main repo by the orchestrator. Do NOT run pnpm install.\nIf you encounter a specific \"Cannot find module\" error, run it SYNCHRONOUSLY\n(never with run_in_background). Never use sleep or polling loops to wait for commands.\n\nIMPORTANT: If you encounter \"exceeds maximum allowed tokens\" error when reading files:\n- Use Grep to search for specific code patterns instead of reading entire files\n- Use Read with offset/limit parameters to paginate through large files\n- Avoid reading auto-generated files like payload-types.ts (use Grep instead)\nSee the \"Working with Large Files\" section in the project documentation (CLAUDE.md / AGENTS.md) for details.\n\nLINEAR CLI (CRITICAL):\nUse the Linear CLI (`pnpm af-linear`) for ALL Linear operations. Do NOT use Linear MCP tools.\nSee the project documentation (CLAUDE.md / AGENTS.md) for the full command reference.\n\nHUMAN-NEEDED BLOCKERS:\nIf you encounter work that requires human action and cannot be resolved autonomously\n(e.g., missing API keys/credentials, infrastructure not provisioned, third-party onboarding,\nmanual setup steps, policy decisions, access permissions), create a blocker issue:\n  pnpm af-linear create-blocker <SOURCE-ISSUE-ID> --title \"What human needs to do\" --description \"Detailed steps\"\nThis creates a tracked issue in Icebox with 'Needs Human' label, linked as blocking the source issue.\nDo NOT silently skip human-needed work or bury it in comments.\nOnly create blockers for things that genuinely require a human — not for things you can retry or work around.",
+  "startedAt": 1775443140322,
+  "status": "completed",
+  "currentPhase": "Finalizing work",
+  "lastUpdatedAt": 1775443186397,
+  "recoveryAttempts": 0,
+  "workerId": "cli-single",
+  "pid": 57142,
+  "taskListId": "BAC-33-DEV",
+  "providerName": "claude"
+}
